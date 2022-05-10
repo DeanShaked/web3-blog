@@ -41,17 +41,18 @@ describe("Blog", function () {
 
   it('Should update the name', async () => {
 
-    const name = await blog.name();
-
-    console.log('name', name)
+    const blogName = await blog.name();
+    
+    
     // Test the blog name
-    expect(await blog.name()).to.equal("My Blog");
-
+    expect(blogName).to.equal("My Blog");
+    
     // Update the blog name
-    await blog.updateName('My new blog');
-
+    await blog.updateName("My new blog");
+    
     // Test the updated blog name
-    expect(await blog.name().to.equal("My new blog"));
+    const newBlogName = await blog.name();
+    await expect(newBlogName).to.equal("My new blog");
   })
 
 
