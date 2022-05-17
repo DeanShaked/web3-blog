@@ -1,20 +1,20 @@
 require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
-  solidity: "0.8.4",
-  networks: {
-    hardhat: {
-      chainId: 1337,
+    solidity: "0.8.4",
+    networks: {
+        hardhat: {
+            chainId: 1337,
+        },
+        // mumbai: {
+        //   url: "https://rpc-mumbai.matic.today",
+        //   accounts: [process.env.pk],
+        // },
+        polygon: {
+            url: "https:/polygon-mainnet.infura.io/v3/6f8f108c5bf44e408d3fb1e9357e2e55",
+            accounts: [process.env.PK],
+        },
     },
-    // mumbai: {
-    //   url: "https://rpc-mumbai.matic.today",
-    //   accounts: [process.env.pk],
-    // },
-    // polygon: {
-    //   url: "https://polygon-rpc.com/",
-    //   accounts: [process.env.pk],
-    // },
-  },
 };
 
 /** HARDHAT CONFIGURATION
